@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: white;
+}
+
+.logo{
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+header .logo span{
+    color: #ff0157;
+} /* More precise way to target the span element */
+
+header .navigation{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+header .navigation li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.banner{
+    width: 100vw; /* Viewport width */
+    height: 100vh; /* Viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(https://i.postimg.cc/s29LNR86/bg.jpg); /* Darkens the image */
+    background-size: cover;
+}
+
+.content{
+    max-width: 900px;
+    text-align: center;
+}
+
+.content h2{
+    font-size: 5em;
+    color: white;
+}
+
+.content p{
+    color: white;
+    font-size: 1em;
+}
+
+.btn{
+    font-size: 1.5em;
+    color: white;
+    background-color: #ff0157;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 40px; /* anchor tags are inline elements -- must change display to inline-block for margin to work */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    border-radius: 5px;
+}
