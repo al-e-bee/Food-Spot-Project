@@ -344,9 +344,9 @@ header .navigation li a:hover{
 }
 
 @media only screen and (max-width:599px){
-    *{
+    /* *{
         outline: 2px solid red !important;
-    }
+    } */
 
     body, html{
         overflow-x: hidden;
@@ -433,16 +433,44 @@ header .navigation li a:active{
 
 .btn{
     font-size: 1em;
-    color: white;
-    background-color: #ff0157;
-    text-decoration: none;
-    padding: 8px 20px;
-    margin-top: 40px; /* anchor tags are inline elements -- must change display to inline-block for margin to work */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: inline-block;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 8px 15px;
+    margin-top: 30px; 
+}
+
+section.about, 
+section.menu{
+    padding: 10px 30px;
+}
+
+section.expert,
+section.testimonial,
+section.contact{
+    padding: 30px;
 }
   
+.row, .menu-content, .testimonial .content{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0; /* Clears out 3em desktop padding causing shifting to right */
+}
+
+.row .col50{
+    width: 100%; /* Tells children inside to take up 100% of space */ 
+}
+
+.menu-content .box,
+.expert .menu-content .box,
+.testimonial .content .box{
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.contactform{
+    margin: 30px auto 0; /* Center it and removes 50px left margin */
+    width: 100%;
+    max-width: 100%;
+}
+
 }
