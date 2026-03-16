@@ -368,7 +368,7 @@ header .navigation li a:hover{
     }
 
     .logo{
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     header .navigation{
@@ -425,10 +425,8 @@ header .navigation li a:active{
 
 .content p{
     color: white;
-    width: 100%;
-    word-wrap: break-word;
-    text-align: center;
-    font-size: .6em;
+    
+    font-size: .8em;
 }
 
 .btn{
@@ -438,16 +436,36 @@ header .navigation li a:active{
 }
 
 section.about, 
-section.menu{
+section.menu,
+section.testimonial{
     padding: 10px 30px;
 }
 
-section.expert,
-section.testimonial,
+section.expert{
+    padding: 20px 30px 40px;
+}
 section.contact{
     padding: 30px;
 }
   
+section.about .titleText,
+section.menu .titleText,
+section.expert .titleText,
+section.testimonial .titleText.white{
+    font-size: 1.8em;
+}
+
+section.banner .content p,
+section.about .row .col50 p,
+section.menu .title p,
+section.expert .title p,
+section.testimonial .title p{
+    font-size: .8em
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    padding: 10px 10px 15px 10px;
+}
 .row, .menu-content, .testimonial .content{
     flex-direction: column;
     align-items: center;
@@ -465,6 +483,65 @@ section.contact{
     width: 100%;
     max-width: 340px;
     margin: 0 auto;
+}
+
+.expert .menu-content .box .imgbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.expert .menu-content .box .imgbox{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+section.testimonial .content{
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+section.testimonial .content .box{
+    margin: 10px auto !important;
+    padding: 20px;
+    width: 90%;
+    max-width: 340px;
+}
+
+section.testimonial .content .box .imgbox{
+    width: 200px !important;
+    height: 200px !important;
+    min-height: 200px !important;
+    margin: 0 auto 15px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    display: block !important;
+}
+
+section.testimonial .content .box .imgbox img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+}
+
+.testimonial .box .text h2{
+    color: #ff0157;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.text p{
+    color: #2f2f2f;
+    font-style: italic;
+}
+
+section.contact{
+    background: none;
 }
 
 .contactform{
