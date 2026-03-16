@@ -460,7 +460,7 @@ section.about .row .col50 p,
 section.menu .title p,
 section.expert .title p,
 section.testimonial .title p{
-    font-size: .8em
+    font-size: .8em;
     width: 100%;
     word-wrap: break-word;
     text-align: center;
