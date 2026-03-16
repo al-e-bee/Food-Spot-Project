@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Spot</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css" class="stylesheet">
     <script src="https://kit.fontawesome.com/c288690489.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <a href="#" class="logo">Food<span>Spot</span></a> <!--Span allows for logo to be styled in two different colors-->
-
-        <ul class="navigation">
+        <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+        <ul class="navigation" id="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Menu</a></li>
@@ -248,5 +250,12 @@
         <a href=""><i class="fa-solid fa-envelope"></i></a>
     </div>
 </footer>
+
+ <script>
+        function toggleMenu(){
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

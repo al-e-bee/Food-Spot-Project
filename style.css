@@ -3,6 +3,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
 
@@ -64,6 +65,13 @@ header .navigation li a:hover{
     color: #ff0157;
 }
 
+.menu-toggle{
+     color: #2f2f2f;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
 .banner{
     width: 100%; 
     height: 100vh; /* Viewport height */
@@ -106,10 +114,6 @@ header .navigation li a:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-
-.btn:hover{
-    
-}
 .about{
     padding: 80px;
 }
@@ -339,3 +343,106 @@ header .navigation li a:hover{
     font-weight: 300;
 }
 
+@media only screen and (max-width:599px){
+    *{
+        outline: 2px solid red !important;
+    }
+
+    body, html{
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .menu-toggle{
+        display: block;
+        font-size: 24px;
+        z-index: 1001;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .logo{
+        font-size: 1.5em;
+    }
+
+    header .navigation{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #fff;
+        top: 60px; /* Position ourself below the navbar */
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+        z-index: 1000; /* Staying above other elements */
+        gap: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .navigation.active{
+    display: flex;
+}
+
+header .navigation li{
+    text-align: center;
+    width: 100%;
+}
+
+header .navigation li a{
+    text-decoration: none;
+    color: #2f2f2f;
+    font-weight: 400;
+    font-size: 1.2em;
+    padding: 10px;
+    display: block;
+}
+
+header .navigation li a:active{
+    color: #ff0157;
+    transform: scale(.95);
+}
+
+.content{
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+    overflow: hidden;
+    /* text-align: center; */
+}
+
+.content h2{
+    font-size: 2.5em;
+    color: white;
+    word-wrap: break-word;
+}
+
+.content p{
+    color: white;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: .6em;
+}
+
+.btn{
+    font-size: 1em;
+    color: white;
+    background-color: #ff0157;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin-top: 40px; /* anchor tags are inline elements -- must change display to inline-block for margin to work */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+  
+}
